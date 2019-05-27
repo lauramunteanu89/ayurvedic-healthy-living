@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pick a Date</title>
+        <link rel='stylesheet' type='text/css' href='123.css'/>
+        <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+        <script type='text/javascript' src='script.js'></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+    </head>
+	<body>
+		<p>Date: <input type="date" id="datepicker"></p>
+        
+        
+<div class="form-group">
+<label>Name:</label>
+<input id="name" type="text"><br>
+        </div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" class="form-control" id="email" placeholder="Email" name="email" required>
+        </div>
+<div class="form-group">
+<label for="name">Representative:</label>
+<select id="representative" name="representative" class="form-control">
+        <option value="Chris Nett">Chris Nett</option>
+        <option value="Sarah Jones">Sarah Jones</option>
+        <option value="Antoine Aman">Antoine Aman</option>
+        <option value="Aly Spencer">Aly Spencer</option>
+        <option value="Raed Timih">Raed Timih</option>
+        </select>
+       </div>
+<div class="form-group">
+<label>Date:</label>
+<input id="date" type="date"><br>
+        </div>
+<div class="form-group">
+<label>Month:</label>
+ <input id="month" type="month"><br>
+    </div>
+<div class="form-group">
+ <label>Week:</label>
+ <input id="week" type="week"><br>
+    </div>
+<div class="form-group">
+ <label>Time:</label>
+  <input id="time" type="time"><br>
+    </div>
+<div class="form-group">
+<label>Details:</label>
+<input id="details" type="text"><br>
+        </div>
+<button type="submit" class="btn btn-default" style="display: block; margin: auto;">Book your Time</button>
+	</body>
+</html>

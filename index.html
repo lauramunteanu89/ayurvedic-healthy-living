@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="mystyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+        function toggleIcon(e) {
+    $(e.target)
+        .prev('.panel-heading')
+        .find(".more-less")
+        .toggleClass('glyphicon-plus glyphicon-minus');
+}
+$('.panel-group').on('hidden.bs.collapse', toggleIcon);
+$('.panel-group').on('shown.bs.collapse', toggleIcon);
+</script>
+ </head>
+<body>
+<nav class="navbar navbar-inverse ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+      </button>
+      <a class="navbar-brand" href="index.html">HEALTHY LIVING</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Pure Life</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Ayurveda <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Test Your Dosha </a></li>
+            <li><a href="#">Ayurvedic Diet</a></li>
+            <li><a href="#">Ayurvedic Massage</a></li>
+          </ul>
+        </li>
+          <li><a href="#" data-toggle="modal" data-target="#Schedule">Make an appointment</a></li>
+           <li><a href="Contact.html">Contact</a></li>
+      </ul>
+
+          <div class="modal fade" id="Schedule">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title"><center></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </h5>
+              </div>
+<div class="appointment_form">
+<div class="form-group">
+<label>Name:</label>
+<input type="text" ><br>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="appointment" name="email" required>
+        </div>
+<div class="form-group">
+<label for="name">Representative:</label>
+<select id="representative" name="representative">
+        <option value="Chris Nett">Chris Nett</option>
+        <option value="Sarah Jones">Sarah Jones</option>
+        <option value="Antoine Aman">Antoine Aman</option>
+        <option value="Aly Spencer">Aly Spencer</option>
+        <option value="Raed Timih">Raed Timih</option>
+        </select>
+       </div>
+<div class="form-group">
+<label>Date:</label>
+<input type="date"><br>
+        </div>
+<div class="form-group">
+<label>Month:</label>
+ <input type="month"><br>
+    </div>
+<div class="form-group">
+ <label>Week:</label>
+ <input type="week"><br>
+    </div>
+<div class="form-group">
+ <label>Time:</label>
+  <input type="time"><br>
+    </div>
+<div class="form-group">
+<label>Details:</label>
+<input type="text"><br>
+        </div>
+<button type="submit" class="btn btn-default" style="display: block; margin: auto; background: #19a84a; color:white; margin-top: 6%; margin-bottom: 2%;">Make appointment</button>
+</div>
+            </div>
+    </div>
+  </div>
+
+     <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="Register.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</a></li>
+      </ul>
+          <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title"><center></center>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </h5>
+              </div>
+
+              <!--Login Script
+              <script type="text/javascript">
+              function do_login()
+              {
+              var email=$("#email").val();
+              var pass=$("#pwd").val();
+              if(email!="" && pass!="")
+              {
+              $("#loading_spinner").css({"display":"block"});
+              $.ajax
+              ({
+              type:'post',
+              url:'do_login.php',
+              data:{
+              do_login:"do_login",
+              email:email,
+              password:pass
+              },
+              success:function(response) {
+              if(response=="success")
+              {
+              window.location.href="index.php";
+              }
+              else
+              {
+              $("#loading_spinner").css({"display":"none"});
+              alert("Wrong Details");
+              }
+              }
+              });
+              }
+
+              else
+              {
+              alert("Please Fill All The Details");
+              }
+
+              return false;
+              }
+              </script>
+              End of Login Script-->
+              
+         <div class="signin_form2">
+        <i class="fa fa-unlock-alt fa-3x" style="padding-left: 45%; color: white;"></i>
+        <div><h2><center>Welcome Back!</center></h2></div>
+        <p id="login_label">Email : demo@demo.com | Password : demo</p>
+        <form method="post" action="do_login.php" onsubmit="return do_login();">
+        <div class="form-group">
+        <label for="email">  </label>
+        <input type="email" id="email" placeholder="Email" name="email" required>
+        </div>
+        <div class="form-group">
+        <label for="pwd" style="padding-left: 48%;">   </label>
+        <input type="password" id="pwd" placeholder="Password" name="pwd" required>
+        </div>
+        <button type="submit" class="btn btn-default" style="display: block; margin: auto;">Submit</button>
+        </form>
+        <p id="loading_spinner"><img src="370.gif"></p>
+            <br />
+          <div class="social" style="width: 100;">
+        <h4><center>Or login with your account:</center></h4>
+             <br />
+             <center><a href=""><img src="social-facebook-circular-button.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><img src="social-google-plus-circular-button.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""><img src="social-linkedin-circular-button.png"></a></center>
+          </div>
+          </div>
+
+            </div>
+    </div>
+  </div>
+    </div>
+  </div>
+</nav>
+
+<!--------Main image with tooltips on------------->
+<img class = "img-responsive" src = "brooke-lark-261793%20(Large).jpg" style="width: 90%; display: block; margin: auto;">
+   <div class="hotspot_dot1">
+  <div class="pulse"></div>
+  <div class="dot" data-toggle="tooltip"  data-placement= "top" title="Breakfast Plate I"><span class = "tooltiptext"></span></div>
+
+<div class="hotspot_dot2">
+  <div class="pulse"></div>
+  <div class="dot" data-toggle="tooltip" title="Coffee with milk"></div>
+</div>
+
+<div class="hotspot_dot3">
+  <div class="pulse"></div>
+  <div class="dot" data-toggle="tooltip" title="Fruit Bowl"></div>
+</div>
+
+<div class="hotspot_dot4">
+  <div class="pulse"></div>
+  <div class="dot" data-toggle="tooltip" title="Breakfast Plate II"></div>
+</div>
+</div>
+
+<div class = "col-md-12" style = "background-color: #dedede;">
+<div class="row">
+    <div class = "col-md-4">
+        <h2 style="text-align: center;">Lorem Ipsum</h2>
+        <div class="lorem"><p>Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam</p>
+       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        More about Us
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        What We Do
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="more-less glyphicon glyphicon-plus"></i>
+                        Our Clients
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                </div>
+            </div>
+        </div>
+
+    </div><!-- panel-group -->
+
+
+</div><!-- container -->
+<!-------End of Accordion---------->
+    </div>
+    <div class = "col-md-4">
+        <h2 style="text-align: center;">Lorem Ipsum</h2>
+        <p class="lorem">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+    <div class = "col-md-4">
+        <h2 style="text-align: center;">Lorem Ipsum</h2>
+        <p class="lorem">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+</div>
+</div>
+<div class="col-md-12">
+<h1 class="type" style="text-align: center;"><strong>Do fruits and vegetables work for you?</strong></h1>
+</div>
+<div id = "fruitmap" class="col-md-6" style = " border-top: 2px #ffffff solid; border-bottom: 2px #ffffff solid; border-right: 1px #ffffff solid;">
+<img class = "img-responsive" src = "healthybucket.png" style="display: block; margin-left: auto; margin-right: auto; opacity: 0.9;">
+    <a id="hotspot1" class="fruits_hotspots">1</a>
+    <a id="hotspot2" class="fruits_hotspots">2</a>
+    <a id="hotspot3" class="fruits_hotspots">3</a>
+    <a id="hotspot4" class="fruits_hotspots">4</a>
+    <a id="hotspot5" class="fruits_hotspots">5</a>
+</div>
+<div id="content_fruitmap" class="col-md-6">
+    <div id="lettuce" class="content_fruitmap">
+    <h2 style="text-align:center;">Lettuce</h2>
+    <br />
+    <p id="1">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut <strong>integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus</strong>. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+    <div id="chilli" class="content_fruitmap">
+    <h2 style="text-align:center;">Chilli</h2>
+    <br />
+        <p id="2">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed <strong>integer aliquam pulvinar dignissim</strong> vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+     <div id="potatoes" class="content_fruitmap">
+    <h2 style="text-align:center;">Potatoes</h2>
+    <br />
+         <p id="3">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus <strong>nibh consectetuer sed quam, parturient nam et</strong>, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+     <div id="carrots" class="content_fruitmap">
+    <h2 style="text-align:center;">Carrots</h2>
+    <br />
+         <p>Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, volutpat ut, natoque ornare non metus. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. <strong>Vulputate bibendum ac molestie excepteur commodo dui</strong>, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+     <div id="beans" class="content_fruitmap">
+    <h2 style="text-align:center;">Beans</h2>
+    <br />
+         <p id="4">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Risus suspendisse, quam sed integer aliquam pulvinar dignissim vulputate, mauris sodales metus. Inceptos felis, volutpat integer dui. Mauris sociis in, accumsan cursus nibh consectetuer sed quam, parturient nam et, <strong>volutpat ut, natoque ornare non metus</strong>. Class vel molestie ac gravida vestibulum quis, curabitur accusantium dui tortor. Vulputate bibendum ac molestie excepteur commodo dui, nunc nulla wisi justo neque wisi, nonummy eget aliquam metus. Quis viverra. Odio ipsum etiam ut lacus aliquet, porta sed eros molestie quis tincidunt, libero pede quis nullam quam, nec nullam ac ut consectetuer elit, libero leo mus cupidatat sociosqu sollicitudin. Elit et at pede ullamcorper eget, suspendisse id vel, porta odio amet ac massa pellentesque tincidunt. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus.</p>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+    $("#hotspot1").click(function(){
+        $("#lettuce").show();
+        $("#chilli").hide();
+        $("#potatoes").hide();
+        $("#carrots").hide();
+        $("#beans").hide();
+    })
+$("#hotspot2").click(function(){
+        $("#chilli").show();
+        $("#lettuce").hide();
+        $("#potatoes").hide();
+        $("#carrots").hide();
+        $("#beans").hide();
+    })
+$("#hotspot3").click(function(){
+        $("#potatoes").show();
+        $("#chilli").hide();
+        $("#lettuce").hide();
+        $("#carrots").hide();
+        $("#beans").hide();
+    })
+$("#hotspot4").click(function(){
+        $("#carrots").show();
+        $("#chilli").hide();
+        $("#potatoes").hide();
+        $("#lettuce").hide();
+        $("#beans").hide();
+    })
+$("#hotspot5").click(function(){
+        $("#beans").show();
+        $("#chilli").hide();
+        $("#potatoes").hide();
+        $("#carrots").hide();
+        $("#lettuce").hide();
+    })
+
+});
+</script>
+<br />
+<br />
+<div class="col-md-4" style="background-color: #3B4449; margin-top: 20px; opacity: 0.9;"><img class = "healthy_eating" src="heartbeat.png">
+<p class = "healthy_content">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus.  Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus</p>
+</div>
+<div class="col-md-4" style="background-color: #3B4449; margin-top: 20px;"><img class = "healthy_eating" src="icon.png" >
+<p class = "healthy_content">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus</p>
+</div>
+<div class="col-md-4" style="background-color: #3B4449; margin-top: 20px; opacity: 0.9;"><img class = "healthy_eating" src="vegetarian.png" >
+<p class = "healthy_content">Lorem ipsum dolor sit amet, tristique morbi, mauris proin, aut integer ut mauris non praesent, est ac, malesuada libero ultrices ac felis id luctus. Donec in orci laoreet a ornare a, ac in cras vitae nulla euismod, quam sollicitudin ante, eu sagittis praesent vel ante vivamus</p>
+</div>
+<footer>
+<div class = "last col-md-12">
+	<div class="footer row">
+    	<div class="col-md-4">
+    		<ul>
+    			<li style = "font-size: 18px;"><a href="#">HEALTHY LIVING</a></li>
+    		</ul>
+    	</div>
+    	<div class="col-md-4">
+    		<ul>
+    			<li><a href="#"><strong>Ayurveda</strong></a></li>
+    			<li><a href="#">Test Your Dosha</a></li>
+    			<li><a href="#">Ayurvedic Diet</a></li>
+    			<li><a href="#">Ayurvedic Massage</a></li>
+    		</ul>
+    	</div>
+    	<div class="col-md-4">
+    		<ul>
+    			<li><a href="#">Pure Life</a></li>
+    			<li><a href="#">Make an appointment</a></li>
+    			<li><a href="#">Contact</a></li>
+    			<li><a href="#">Login</a></li>
+    			<li><a href="#">Sign Up</a></li>
+    		</ul>
+    	</div>
+	</div>
+	<div>
+	      <iframe id="map-container" frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOwg_06VPwokRYv534QaPC8g&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg" >
+      </iframe>
+    </div>
+</div>
+</footer>
+</body>
+</html>

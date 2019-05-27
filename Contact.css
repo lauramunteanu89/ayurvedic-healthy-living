@@ -1,0 +1,122 @@
+body {
+    background-image: url(Contact_Us.jpg);
+}
+.signin_form2{
+    background: #19a84a; 
+    padding: 8%;
+    color: #dedede;
+    text-align: justify;
+    }
+
+#text, #country, #email_contact {
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #19a84a;
+    margin: none;
+    outline: none;
+    color: #000000;
+}
+#pwd, #email_signin {
+    background-color: #19a84a;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    margin: none;
+    outline: none;
+    color: white;
+}
+#message {
+    border: 1px solid #19a84a;
+}
+#submit{
+    background: #19a84a;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+button:hover {
+  opacity: 0.8;
+}
+label {
+    text-align: center;
+}
+::placeholder{
+    color: #dedede !important;
+    font-style:italic !important;
+    font-size: 13px;
+}
+#contact_form{
+    background: rgba(222, 222, 222, 0.5);
+    margin: 2p%;
+    padding-top: 3%; 
+    padding-right: 3%; 
+    padding-bottom: 3%; 
+    padding-left: 3%; 
+    margin: 5%;
+}
+.contact_text{
+    margin: 5%;
+}
+.address {
+    margin: 4%;
+    width: 61%;
+    padding: 3%;
+    border: 1px solid #19a84a;
+    background: 0;
+}
+@media screen and (min-width:360px){
+    .address {
+    margin: 4%;
+    width: 92%;
+    padding: 3%;
+    border: 1px solid #19a84a;
+    background: rgba(222, 222, 222, 0.5);
+}
+}
+@media screen and (max-width:360px){
+    .address {
+    margin: 4%;
+    width: 92%;
+    padding: 3%;
+    border: 1px solid #19a84a;
+    background: rgba(222, 222, 222, 0.5);
+}
+}
+@media screen and (min-width:1920px){
+    .address {
+    margin: 4%;
+    width: 61%;
+    padding: 3%;
+    border: 1px solid #19a84a;
+    background: 0;
+}
+}
+@media screen and (min-width:992px){
+    .address {
+    margin: 4%;
+    width: 61%;
+    padding: 3%;
+    border: 1px solid #19a84a;
+    background: 0;
+}
+}
+input, #appointment, #representative{
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+    border-bottom:1px solid #19a84a;
+    margin-bottom: 0.5%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: #dedede;
+}
+
+.appointment_form {
+    padding: 6%;
+    background: #dedede;
+}

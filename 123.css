@@ -1,0 +1,18 @@
+
+label {
+    padding: 2%;
+    
+}
+
+#name, #email, #representative, #date, #month, #week, #time, #details {
+    font-size: 14px;
+    color: #000000;
+    border-bottom:1px solid #19a84a;
+    margin-bottom: 0.5%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+button:hover {
+  opacity: 0.8;
+}

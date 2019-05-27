@@ -1,0 +1,166 @@
+
+a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:active {
+    color: #000000;
+    text-decoration: none;
+} 
+a:hover {
+    color: #000000;
+    text-decoration: none;
+} 
+a:visited {
+    text-decoration: none;
+}
+
+.affix {
+      top:0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+  .navbar {
+      margin-bottom: 0px;
+  }
+.signin_form2{
+    background: #19a84a; 
+    padding: 8%;
+    color: #dedede;
+    text-align: justify;
+    }
+
+#pwd, #email_signin {
+    background-color: #19a84a;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid white;
+    margin: none;
+    outline: none;
+    color: white;
+}
+label {
+    text-align: center;
+}
+::placeholder{
+    color: #dedede !important;
+    font-style:italic !important;
+    font-size: 13px;
+}
+
+
+input, #appointment, #representative{
+    width: 100%;
+    font-size: 14px;
+    color: #000000;
+    border-bottom:1px solid #19a84a;
+    margin-bottom: 0.5%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: #dedede;
+}
+.appointment_form {
+    width: 100%;
+    padding: 6%;
+    background: #dedede;
+}
+#background{
+    background-image: url(register_image.png);
+}
+
+.header{
+    padding-top: 56%;
+    padding-bottom: 55.7%;
+    padding-left: 6%;
+    padding-right: 6%;
+    color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #f1f1f1;
+  margin: 100px auto;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;  
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+#nextBtn {
+  background-color: #19a84a !important;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+
+.tab input{
+    background: #f1f1f1;
+    color: black;
+}
+hr {
+    width: 50%;
+    background: white;
+    height: 0.5px;
+    
+}
